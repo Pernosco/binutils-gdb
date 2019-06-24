@@ -1483,6 +1483,8 @@ jit_gdbarch_data_init (struct obstack *obstack)
 void
 _initialize_jit (void)
 {
+  return;
+
   jit_reader_dir = relocate_gdb_directory (JIT_READER_DIR,
                                            JIT_READER_DIR_RELOCATABLE);
   add_setshow_zuinteger_cmd ("jit", class_maintenance, &jit_debug,
