@@ -1095,6 +1095,7 @@ jit_inferior_init (inferior *inf)
   struct gdbarch *gdbarch = inf->gdbarch;
   program_space *pspace = inf->pspace;
 
+  return;
   jit_debug_printf ("called");
 
   jit_prepend_unwinder (gdbarch);
