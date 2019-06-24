@@ -1382,6 +1382,7 @@ jit_inferior_created_hook (void)
 void
 jit_breakpoint_re_set (void)
 {
+  return;
   jit_breakpoint_re_set_internal (target_gdbarch (),
 				  get_jit_program_space_data ());
 }
