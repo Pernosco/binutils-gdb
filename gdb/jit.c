@@ -1318,6 +1318,8 @@ jit_inferior_init (struct gdbarch *gdbarch)
   struct jit_program_space_data *ps_data;
   CORE_ADDR cur_entry_addr;
 
+  return;
+
   if (jit_debug)
     fprintf_unfiltered (gdb_stdlog, "jit_inferior_init\n");
 
