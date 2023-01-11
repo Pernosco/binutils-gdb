@@ -1,3 +1,8 @@
+2023-01-11  Kyle Huey  <khuey@pernos.co>
+	* dwp.cc: Exit with an error if the specified executable
+	does not reference any dwos and none were provided on the command
+	line.
+
 2023-01-03  Nick Clifton  <nickc@redhat.com>
 
 	* po/ro.po: Updated Romainian translation.

@@ -2424,8 +2424,14 @@ main(int argc, char** argv)
   for (int i = optind; i < argc; ++i)
     files.push_back(Dwo_file_entry(0, argv[i]));
 
-  if (exe_filename == NULL && files.empty())
-    gold_fatal(_("no input files and no executable specified"));
+  if (files.empty())
+    {
+      if (exe_filename == NULL)
+	gold_fatal(_("no input files and no executable specified"));
+      else
+	gold_fatal(_("specified executable '%s' references no dwos"),
+		   exe_filename);
+    }
 
   if (verify_only)
     {
