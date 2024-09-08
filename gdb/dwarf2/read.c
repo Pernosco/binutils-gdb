@@ -7544,9 +7544,7 @@ try_open_dwop_file (dwarf2_per_bfd *per_bfd, const char *file_name, int is_dwp,
 				    search_path, nullptr));
   search_path = search_path_holder.get ();
 
-  openp_flags flags = OPF_RETURN_REALPATH;
-  if (is_dwp)
-    flags |= OPF_SEARCH_IN_PATH;
+  openp_flags flags = OPF_RETURN_REALPATH | OPF_SEARCH_IN_PATH;
 
   gdb::unique_xmalloc_ptr<char> absolute_name;
   desc = openp (search_path, flags, file_name, O_RDONLY | O_BINARY,
